@@ -1,7 +1,0 @@
-Rank,Name,Median_score,Cooperation_rating,Wins,Initial_C_rate,CC_rate,CD_rate,DC_rate,DD_rate,CC_to_C_rate,CD_to_C_rate,DC_to_C_rate,DD_to_C_rate
-0,Forgiving Tit For Tat,2.95,0.95,0.0,1.0,0.9,0.05,0.05,0.0,1.0,0,1.0,0
-1,Grudger,2.95,0.85,1.0,1.0,0.8,0.05,0.1,0.05,1.0,0,0,0
-2,Win-Stay Lose-Shift: C,2.95,0.85,1.0,1.0,0.8,0.05,0.1,0.05,1.0,0,0,0
-3,Hard Tit For Tat,2.95,0.85,1.0,1.0,0.8,0.05,0.1,0.05,1.0,0,0,0
-4,Cooperator,2.7,1.0,0.0,1.0,0.9,0.1,0.0,0.0,1.0,1.0,0,0
-5,Prober,2.25,0.55,1.0,0.0,0.2,0.35,0.3,0.15,0.75,0.625,1.0,0
