@@ -14,7 +14,28 @@ import random
 import glob
 import sys
 
-max_size = len(axl.strategies)  # Max number of strategies
+my_strategies = [
+    axl.Cooperator,                   # Always Cooperate
+    axl.Defector,                     # Always Defect
+    axl.TitForTat,                    # Classic TFT
+    axl.TitFor2Tats,                  # More tolerant than TFT
+    axl.WinStayLoseShift,            # Pavlov (strong in noisy settings)
+    axl.Grudger,                      # Grim Trigger
+    axl.Alternator,                   # Alternating pattern
+    axl.ForgivingTitForTat,           # More generous TFT
+    axl.SuspiciousTitForTat,          # Starts with defection
+    axl.HardTitForTat,                # Harsher TFT
+    axl.Random,                       # 50/50 stochastic
+    axl.RemorsefulProber,             # Prober with forgiveness
+    axl.Gradual,                      # Punishes gradually, then forgives
+    axl.BackStabber                  # Reverse-TFT-like
+]
+
+#max_size = len(axl.strategies)  # Max number of strategies
+max_size = len(my_strategies)  # Max number of strategies
+
+axl.strategies = my_strategies #trying
+
 min_size = 3  # Min number of strategies
 
 max_turns = 200
@@ -60,7 +81,8 @@ while seed < max_seed:
     # Define parameter
     axl.seed(seed)
     size = random.randint(min_size, max_size)
-    strategies = random.sample(axl.strategies, size)
+    #strategies = random.sample(axl.strategies, size)
+    strategies = random.sample(my_strategies, size) 
     players = [s() for s in strategies]
     next_sample = seed + number_of_parameter_sets
 

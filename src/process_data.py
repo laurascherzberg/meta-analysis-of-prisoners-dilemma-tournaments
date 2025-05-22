@@ -57,8 +57,25 @@ def get_strategies_properties():
             "Makes_use_of_length",
         ]
     )
+    my_strategies = [
+    axl.Cooperator,                   # Always Cooperate
+    axl.Defector,                     # Always Defect
+    axl.TitForTat,                    # Classic TFT
+    axl.TitFor2Tats,                  # More tolerant than TFT
+    axl.WinStayLoseShift,            # Pavlov (strong in noisy settings)
+    axl.Grudger,                      # Grim Trigger
+    axl.Alternator,                   # Alternating pattern
+    axl.ForgivingTitForTat,           # More generous TFT
+    axl.SuspiciousTitForTat,          # Starts with defection
+    axl.HardTitForTat,                # Harsher TFT
+    axl.Random,                       # 50/50 stochastic
+    axl.RemorsefulProber,             # Prober with forgiveness
+    axl.Gradual,                      # Punishes gradually, then forgives
+    axl.BackStabber                  # Reverse-TFT-like
+    ]
 
-    for i, strategy in enumerate(axl.strategies):
+    #for i, strategy in enumerate(axl.strategies):
+    for i, strategy in enumerate(my_strategies):
         use_of_game = 0
         use_of_length = 0
         name = strategy().name

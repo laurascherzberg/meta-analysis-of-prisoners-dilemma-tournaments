@@ -3,16 +3,34 @@ import imp
 import numpy as np
 import pandas as pd
 
-import axelrod
+import axelrod as axl
 
 process_data = imp.load_source("processe_data", "src/process_data.py")
 
 
 def test_strategies_properties():
+    my_strategies = [
+    axl.Cooperator,                   # Always Cooperate
+    axl.Defector,                     # Always Defect
+    axl.TitForTat,                    # Classic TFT
+    axl.TitFor2Tats,                  # More tolerant than TFT
+    axl.WinStayLoseShift,            # Pavlov (strong in noisy settings)
+    axl.Grudger,                      # Grim Trigger
+    axl.Alternator,                   # Alternating pattern
+    axl.ForgivingTitForTat,           # More generous TFT
+    axl.SuspiciousTitForTat,          # Starts with defection
+    axl.HardTitForTat,                # Harsher TFT
+    axl.Random,                       # 50/50 stochastic
+    axl.RemorsefulProber,             # Prober with forgiveness
+    axl.Gradual,                      # Punishes gradually, then forgives
+    axl.BackStabber                  # Reverse-TFT-like
+]
+
     df = process_data.get_strategies_properties()
 
     assert isinstance(df, pd.DataFrame)
-    assert len(df) == len(axelrod.strategies)
+    #assert len(df) == len(axelrod.strategies)
+    assert len(df) == len(my_strategies)
 
     for memory_depth in df["Memory_depth"]:
         assert isinstance(memory_depth, float)
