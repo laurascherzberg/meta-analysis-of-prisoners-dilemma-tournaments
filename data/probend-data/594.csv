@@ -1,0 +1,4 @@
+Rank,Name,Median_score,Cooperation_rating,Wins,Initial_C_rate,CC_rate,CD_rate,DC_rate,DD_rate,CC_to_C_rate,CD_to_C_rate,DC_to_C_rate,DD_to_C_rate
+0,Suspicious Tit For Tat,4.5,0.3333333333333333,2.0,0.0,0.19047619047619047,0.14285714285714285,0.6666666666666667,0.0,1.0,0,1.0,0
+1,Cooperator,1.5,1.0,0.0,1.0,0.6904761904761905,0.30952380952380953,0.0,0.0,1.0,1.0,0,0
+2,Forgiving Tit For Tat,1.5,0.875,0.0,1.0,0.5,0.35714285714285715,0.14285714285714285,0.0,1.0,0,1.0,0

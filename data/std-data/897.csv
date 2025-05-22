@@ -1,0 +1,4 @@
+Rank,Name,Median_score,Cooperation_rating,Wins,Initial_C_rate,CC_rate,CD_rate,DC_rate,DD_rate,CC_to_C_rate,CD_to_C_rate,DC_to_C_rate,DD_to_C_rate
+0,Win-Stay Lose-Shift: C,2.475,0.65,1.0,1.0,0.475,0.17500000000000002,0.175,0.17500000000000002,1.0,0,0,1.0
+1,"BackStabber: ('D', 'D')",2.0,0.55,1.0,1.0,0.5,0.05,0.0125,0.4375,0.986842105263158,0.75,0,0
+2,Prober,1.725,0.2,1.0,0.0,0.025,0.175,0.21250000000000002,0.5875,0.5,0.07142857142857142,0.625,0

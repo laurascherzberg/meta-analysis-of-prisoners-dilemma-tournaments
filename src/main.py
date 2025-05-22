@@ -28,7 +28,8 @@ my_strategies = [
     axl.Random,                       # 50/50 stochastic
     axl.RemorsefulProber,             # Prober with forgiveness
     axl.Gradual,                      # Punishes gradually, then forgives
-    axl.BackStabber                  # Reverse-TFT-like
+    axl.BackStabber,                  # Reverse-TFT-like
+    axl.Prober                    # Prober with no forgiveness
 ]
 
 #max_size = len(axl.strategies)  # Max number of strategies

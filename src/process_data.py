@@ -71,7 +71,8 @@ def get_strategies_properties():
     axl.Random,                       # 50/50 stochastic
     axl.RemorsefulProber,             # Prober with forgiveness
     axl.Gradual,                      # Punishes gradually, then forgives
-    axl.BackStabber                  # Reverse-TFT-like
+    axl.BackStabber,                  # Reverse-TFT-like
+    axl.Prober                    # Prober with no forgiveness
     ]
 
     #for i, strategy in enumerate(axl.strategies):

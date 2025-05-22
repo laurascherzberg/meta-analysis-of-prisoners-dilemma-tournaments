@@ -1,0 +1,5 @@
+Rank,Name,Median_score,Cooperation_rating,Wins,Initial_C_rate,CC_rate,CD_rate,DC_rate,DD_rate,CC_to_C_rate,CD_to_C_rate,DC_to_C_rate,DD_to_C_rate
+0,Tit For 2 Tats,3.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,0,0,0
+1,Cooperator,3.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,0,0,0
+2,Grudger,3.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,0,0,0
+3,"BackStabber: ('D', 'D')",3.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0,0,0,0
