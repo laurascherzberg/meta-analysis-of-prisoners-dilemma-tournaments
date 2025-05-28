@@ -1,0 +1,30 @@
+
+\begin{tabular}{lcccccccc}
+\toprule
+ & \multicolumn{2}{c}{Standard} & \multicolumn{2}{c}{Noise} & \multicolumn{2}{c}{Probend} & \multicolumn{2}{c}{Probend Noise} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+Feature & Coef. & p-value & Coef. & p-value & Coef. & p-value & Coef. & p-value \\
+\midrule
+constant           &  0.550 &  0.000 &  2.347 &  0.000 &  2.397 &  0.000 &  2.340 &  0.000 \\
+$CC$ to $C$ rate   &  0.217 &  0.000 & -0.253 &  0.000 &  0.260 &  0.000 &  0.054 &  0.000 \\
+$CD$ to $C$ rate   & -0.182 &  0.000 &  0.060 &  0.003 &  0.107 &  0.000 &  0.026 &  0.002 \\
+$DC$ to $C$ rate   &  0.056 &  0.000 &  0.084 &  0.000 &  0.101 &  0.000 &  0.070 &  0.000 \\
+SSE                & -0.011 &  0.086 & -0.210 &  0.000 &  0.039 &  0.000 &  0.015 &  0.024 \\
+$C_{max}$          &  0.483 &  0.000 &    NaN &    NaN &  0.082 &  0.316 & -1.248 &  0.000 \\
+$C_{min}$          &  0.301 &  0.000 &  0.490 &  0.000 & -0.532 &  0.000 &    NaN &    NaN \\
+$C_{mean}$         &  1.336 &  0.000 &  2.023 &  0.000 &  1.556 &  0.000 &  3.760 &  0.000 \\
+$C_{min}$ / $C_r$  & -0.128 &  0.000 & -0.219 &  0.000 &  0.413 &  0.000 &    NaN &    NaN \\
+$C_r$ / $C_{mean}$ &  0.327 &  0.000 & -0.795 &  0.000 & -1.278 &  0.000 & -0.251 &  0.000 \\
+$k$                &  0.000 &  0.528 &  0.000 &  0.601 & -0.000 &  0.145 &  0.000 &  0.230 \\
+$n$                & -0.000 &  0.001 &    NaN &    NaN &    NaN &    NaN &    NaN &    NaN \\
+memory usage       &  0.175 &  0.000 & -0.060 &  0.000 &    NaN &    NaN &    NaN &    NaN \\
+$C_r$ / $C_{max}$  &    NaN &    NaN & -0.289 &  0.000 &    NaN &    NaN & -1.270 &  0.000 \\
+$p_n$              &    NaN &    NaN &  0.147 &  0.000 &    NaN &    NaN &    NaN &    NaN \\
+$p_e$              &    NaN &    NaN &    NaN &    NaN &  0.058 &  0.000 & -0.061 &  0.000 \\
+\bottomrule
+\midrule
+\multicolumn{9}{l}{Model Fit Statistics:} \\
+R² & \multicolumn{2}{c}{0.654} & \multicolumn{2}{c}{0.639} & \multicolumn{2}{c}{0.816} & \multicolumn{2}{c}{0.866} \\
+Adj. R² & \multicolumn{2}{c}{0.654} & \multicolumn{2}{c}{0.638} & \multicolumn{2}{c}{0.816} & \multicolumn{2}{c}{0.865} \\
+\bottomrule
+\end{tabular}

@@ -45,8 +45,8 @@ def fix_fsm_memory(row):
 
 def get_strategies_properties():
     """
-     A function that returns a data frame with the strategies of the Axelrod
-     library and for each strategy it's property.
+    A function that returns a data frame with the strategies of the Axelrod
+    library and for each strategy it's property.
     """
     axl_strategies = pd.DataFrame(
         columns=[
@@ -58,24 +58,23 @@ def get_strategies_properties():
         ]
     )
     my_strategies = [
-    axl.Cooperator,                   # Always Cooperate
-    axl.Defector,                     # Always Defect
-    axl.TitForTat,                    # Classic TFT
-    axl.TitFor2Tats,                  # More tolerant than TFT
-    axl.WinStayLoseShift,            # Pavlov (strong in noisy settings)
-    axl.Grudger,                      # Grim Trigger
-    axl.Alternator,                   # Alternating pattern
-    axl.ForgivingTitForTat,           # More generous TFT
-    axl.SuspiciousTitForTat,          # Starts with defection
-    axl.HardTitForTat,                # Harsher TFT
-    axl.Random,                       # 50/50 stochastic
-    axl.RemorsefulProber,             # Prober with forgiveness
-    axl.Gradual,                      # Punishes gradually, then forgives
-    axl.BackStabber,                  # Reverse-TFT-like
-    axl.Prober                    # Prober with no forgiveness
+        axl.Cooperator,                   # Always Cooperate
+        axl.Defector,                     # Always Defect
+        axl.TitForTat,                    # Classic TFT
+        axl.TitFor2Tats,                  # More tolerant than TFT
+        axl.WinStayLoseShift,            # Pavlov (strong in noisy settings)
+        axl.Grudger,                      # Grim Trigger
+        axl.Alternator,                   # Alternating pattern
+        axl.ForgivingTitForTat,           # More generous TFT
+        axl.SuspiciousTitForTat,          # Starts with defection
+        axl.HardTitForTat,                # Harsher TFT
+        axl.Random,                       # 50/50 stochastic
+        axl.RemorsefulProber,             # Prober with forgiveness
+        axl.Gradual,                      # Punishes gradually, then forgives
+        axl.BackStabber,                  # Reverse-TFT-like
+        axl.Prober                    # Prober with no forgiveness
     ]
 
-    #for i, strategy in enumerate(axl.strategies):
     for i, strategy in enumerate(my_strategies):
         use_of_game = 0
         use_of_length = 0
@@ -89,10 +88,14 @@ def get_strategies_properties():
             name = "".join(name.split(":"))
         if "Soft Go By Majority:" in name:
             name = "".join(name.split(":"))
+        
+        # Convert memory_depth to float
+        memory_depth = float(strategy().classifier["memory_depth"])
+        
         axl_strategies.loc[i] = [
             name,
             int(strategy().classifier["stochastic"]),
-            strategy().classifier["memory_depth"],
+            memory_depth,  # Now this is a float
             use_of_game,
             use_of_length,
         ]
